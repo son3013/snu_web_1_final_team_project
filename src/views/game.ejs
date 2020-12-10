@@ -7,12 +7,24 @@
     </head>
 
   <body>
-    <div id="position"></div>
-    <div id="status">
-        HP: <span id="HP"></span>
+    <div id="position_box" style="border: 1px solid black; width: 30%">
+      Position: <span id="position"></span>
     </div>
-    <div id="game"></div>
-    <div id="event_result"></div>
+    <br>
+    <div id="status" style="border: 1px solid black; width: 30%;">
+        HP: <span id="HP"></span>
+        <br>
+        str: <span id="str"></span>
+        <br>
+        def: <span id="def"></span>
+        <br>
+    </div>
+    <br>
+    <div id="description" style="border: 1px solid  black; width: 30%">
+      <div id="game"></div>
+      <div id="event_result"></div>
+    </div>
+    <br>
     <div id="control">
       <button value="1">동</button>
       <button value="3">서</button>
@@ -56,6 +68,8 @@ const sendAction = (url, params = {}) => {
         }
 
         $('#HP').text(`${player.HP} / ${player.maxHP}`)
+        $('#str').text(`${player.str}`)
+        $('#def').text(`${player.def}`)
       });
 
     } 

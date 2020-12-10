@@ -8,8 +8,9 @@
       "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
       [0, 0, 1, 1],
       [
-        { "type": "battle", "monster": 1, "percent": 70 },
-        { "type": "item", "item": 1, "percent": 30 }
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
       ]
     ],
     [
@@ -18,8 +19,9 @@
       "행운이 찾아올 것 같다.",
       [1, 1, 0, 0],
       [
-        { "type": "item", "item": 1, "percent": 70 },
-        { "type": "battle", "enemy": 1, "percent": 30 }
+        { "type": "battle", "percent": 30 },
+        { "type": "item", "percent": 60 },
+        { "type": "nothing", "percent": 10 }
       ]
     ],
     [1, 1, "아무것도 없다.", [1, 0, 0, 1], [], []]

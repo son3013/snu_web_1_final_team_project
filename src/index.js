@@ -3,7 +3,7 @@ const fs = require("fs");
 const mongoose = require("mongoose");
 const crypto = require("crypto");
 
-const { constantManager, mapManager } = require("./datas/Manager");
+const { constantManager, mapManager, monsterManager, itemManager } = require("./datas/Manager");
 const { Player } = require("./models/Player");
 const { text } = require("express");
 
@@ -63,10 +63,15 @@ app.post("/signup", async (req, res) => {
   return res.send({ key });
 });
 
+app.get("/init", async (req, res) => {
+  res.render("init")
+})
+
 app.post("/action", authentication, async (req, res) => {
   const { action } = req.body;
-  console.log(action);
+  
   const player = req.player;
+  console.log(action, player.x, player.y);
   let event = null;
   let field = null;
   let actions = [];
@@ -74,7 +79,11 @@ app.post("/action", authentication, async (req, res) => {
     field = mapManager.getField(req.player.x, req.player.y);
     console.log(field);
   } else if (action === "move") {
-    const direction = parseInt(req.body.direction, 0); // 0 북. 1 동 . 2 남. 3 서.
+    const direction = parseInt(req.body.direction, 0); 
+    // 0 북. 1 동 . 2 남. 3 서.
+    // [손정현 / 유호영] TO DO: 조건이 10x10 지도를 만드는건데, 현재 저희는 (0,0) (0,1) (1,0) (1,1) 밖에 되지 않아요.
+    // 10 x 10 지도를 만들어주세요.
+    // 또, 지도 끝 부분에 도착하면 다른데로 더 못가게 해주세요.
     let x = req.player.x;
     let y = req.player.y;
     if (direction === 0) {
@@ -95,21 +104,57 @@ app.post("/action", authentication, async (req, res) => {
 
     const events = field.events;
     const actions = [];
-    if (events.length > 0) {
-      // TODO : 확률별로 이벤트 발생하도록 변경
-      const _event = events[0];
-      if (_event.type === "battle") {
-        // TODO: 이벤트 별로 events.json 에서 불러와 이벤트 처리
 
-        event = { description: "늑대와 마주쳐 싸움을 벌였다." };
-        player.incrementHP(-1);
+    if (events.length > 0) {
+      // [이종인] 확률별로 이벤트 발생하도록 변경
+      const event1 = events[0];
+      const event2 = events[1];
+      const rand_num = Math.floor(Math.random() * 100) + 1;
+      let _event = {};
+
+      if (rand_num <= event1.percent) {
+        _event = events[0];
+      } else if (event1.percent < rand_num <= event1.percent+event2.percent) {
+        _event = events[1];
+      } else {
+        _event = events[2];
+      }
+      
+      if (_event.type === "battle") {
+        // [박상진] TO DO: 종인이 대략 작성해놓은 코드를 검토해주세요. 경험치와 레벨링 기능을 추가해주세요.
+        // 이벤트 별로 events.json 에서 불러와 이벤트 처리하라고 했는데, 이부분도 시도해주시면 감사하겠습니다.
+        monster = monsterManager.getRandomMonster();
+        event = { description: `${monster.name}와(과) 마주쳐 싸움을 벌였다.` };
+        while (true) {
+          if ((player.str - monster.def) > 0) {
+            monster.hp -= (player.str - monster.def);
+            console.log(monster.hp);
+            if (monster.hp <= 0){
+              event.result = `${monster.name}을 처치하였습니다!`
+              break;
+            }
+          }
+          console.log(`Hi. ${monster.hp}`);
+          if ((monster.str - player.def) > 0) {
+            player.incrementHP(-(monster.str - player.def));
+            if (player.HP <= 0) {
+                x = 0, y = 0;
+                field = mapManager.getField(x, y);
+                player.x = x;
+                player.y = y;
+                player.HP = player.maxHP;
+              event.result = `당신은 ${monster.name}에게 처치당했습니다..GAME OVER`;
+              break;
+            }
+          }
+        }
       } else if (_event.type === "item") {
-        event = { description: "포션을 획득해 체력을 회복했다." };
-        player.incrementHP(1);
-        player.HP = Math.min(player.maxHP, player.HP + 1);
+        // [박상진] TO DO: 아이템일 경우, 사용자가 랜덤한 아이템을 획득. 사용자 str, def에 반영. 
+        // 랜덤 아이템 가져오는 메서드: item = itemManager.getRandomItem();
+        // 아이템 어떻게 저장하지? Models따로 파야하나 아니면 player.items.push(item) 이렇게 해버릴까?
       }
     }
-
+    console.log(player.x, player.y);
     await player.save();
   }
 
@@ -117,11 +162,11 @@ app.post("/action", authentication, async (req, res) => {
     let text = '';
     if (direction === 1) {
       if (i === 0) {
-        text = '↓'
+        text = '↑'
       } else if (i === 1) {
         text = '→'
       } else if (i === 2) {
-        text = '↑'
+        text = '↓'
       } else if (i === 3) {
         text = '←'
       }

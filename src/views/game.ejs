@@ -52,7 +52,7 @@ const sendAction = (url, params = {}) => {
 
         $('#control').html('');
         req.actions.forEach((action) => {
-          const dom = $('<button></button');
+          const dom = $('<button style="margin-right: 5px;"></button');
           dom.text(action.text);
           dom.bind('click', function () {
               sendAction(action.url, action.params);

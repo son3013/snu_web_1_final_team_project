@@ -117,13 +117,13 @@ app.post("/action", authentication, async (req, res) => {
     let text = '';
     if (direction === 1) {
       if (i === 0) {
-        text = '북'
+        text = '↓'
       } else if (i === 1) {
-        text = '동'
+        text = '→'
       } else if (i === 2) {
-        text = '남'
+        text = '↑'
       } else if (i === 3) {
-        text = '서'
+        text = '←'
       }
       actions.push({
         url: "/action",

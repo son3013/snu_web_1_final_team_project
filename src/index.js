@@ -5,6 +5,7 @@ const crypto = require("crypto");
 
 const { constantManager, mapManager } = require("./datas/Manager");
 const { Player } = require("./models/Player");
+const { text } = require("express");
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -64,12 +65,14 @@ app.post("/signup", async (req, res) => {
 
 app.post("/action", authentication, async (req, res) => {
   const { action } = req.body;
+  console.log(action);
   const player = req.player;
   let event = null;
   let field = null;
   let actions = [];
   if (action === "query") {
     field = mapManager.getField(req.player.x, req.player.y);
+    console.log(field);
   } else if (action === "move") {
     const direction = parseInt(req.body.direction, 0); // 0 북. 1 동 . 2 남. 3 서.
     let x = req.player.x;
@@ -111,12 +114,23 @@ app.post("/action", authentication, async (req, res) => {
   }
 
   field.canGo.forEach((direction, i) => {
-    if (direction === 1)
+    let text = '';
+    if (direction === 1) {
+      if (i === 0) {
+        text = '북'
+      } else if (i === 1) {
+        text = '동'
+      } else if (i === 2) {
+        text = '남'
+      } else if (i === 3) {
+        text = '서'
+      }
       actions.push({
         url: "/action",
-        text: i,
+        text: text,
         params: { direction: i, action: "move" }
       });
+    }
   });
 
   return res.send({ player, field, event, actions });

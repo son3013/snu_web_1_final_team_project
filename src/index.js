@@ -69,6 +69,54 @@ app.get("/init", async (req, res) => {
 })
 
 
+
+// 사용자가 몬스터 공격하는 턴에서 공격할때
+/*
+  _player : player model instance
+  _monster : monster instance
+  return : Monster 처치 시 1, 처리 실패 시 monster.hp 반환
+*/
+const attackMonster = async (_player, _monster) => {
+  if ((_player.str - _monster.def) > 0) {
+    _monster.hp -= (_player.str - _monster.def);
+    console.log(_monster.hp);
+
+    // Monster 처치
+    if (_monster.hp <= 0){
+      _player.incrementExp(_monster.exp);
+      await _player.save()
+      return 1
+    };
+  return _monster.hp
+  };
+};
+
+
+// 몬스터가 플레이어 공격하는 턴에서 공격할때
+/*
+  _player : player model instance
+  _monster : monster instance
+  return : 사용자 사망 시 1, 처리 실패 시 player 줄어든 hp 저장
+*/
+const getAttacked = async (_player, _monster) => {
+  if ((_monster.str - _player.def) > 0) {
+    _player.incrementHP(-(_monster.str - _player.def));
+
+    // Player 사망
+    if (_player.HP <= 0) {
+        x = 0, y = 0;
+        field = mapManager.getField(x, y);
+        _player.x = x;
+        _player.y = y;
+        _player.HP = _player.maxHP;
+        await _player.save();
+        return 1;
+      }
+    await _player.save()
+  };
+};
+
+
 // 사용자가 아이템을 획득했을 때 
 /*
   _player : player model instance
@@ -152,37 +200,21 @@ app.post("/action", authentication, async (req, res) => {
 
         // 싸움 시작 : Player와 Monster가 순서대로 한대씩 때림
         while (true) {
-
           // Player 공격 턴
-          if ((player.str - monster.def) > 0) {
-            monster.hp -= (player.str - monster.def);
-            console.log(monster.hp);
+          attackResult = await attackMonster(player, monster);
+          if (attackResult===1) {
+            event.result = `${monster.name}을 처치하였습니다!`;
+            break;
+          } else {
+            monster.hp = attackResult;
+          }
+          console.log(`Hi. ${monster.name} HP: ${monster.hp}`);
 
-            // Monster 처치
-            if (monster.hp <= 0){
-              event.result = `${monster.name}을 처치하였습니다!`
-              player.incrementExp(monster.exp);
-              await player.save()
-              break;
-            }
-          };
-          console.log(`Hi. ${monster.hp}`);
-
-          // Monster 공격 턴
-          if ((monster.str - player.def) > 0) {
-            player.incrementHP(-(monster.str - player.def));
-
-            // Player 사망
-            if (player.HP <= 0) {
-                x = 0, y = 0;
-                field = mapManager.getField(x, y);
-                player.x = x;
-                player.y = y;
-                player.HP = player.maxHP;
-                player.save()
-              event.result = `당신은 ${monster.name}에게 처치당했습니다..GAME OVER`;
-              break;
-            };
+          // Monster 공격 턴. 
+          let isKilled = await getAttacked(player, monster);
+          if (isKilled===1) {
+            event.result = `당신은 ${monster.name}에게 처치당했습니다..GAME OVER`;
+            break;
           };
         };
       } else if (_event.type === "item") {

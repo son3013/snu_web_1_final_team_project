@@ -192,7 +192,7 @@ app.post("/action", authentication, async (req, res) => {
       
       if (_event.type === "battle") {
         // [완료 - 박상진] TO DO: 종인이 대략 작성해놓은 코드를 검토해주세요. 경험치와 레벨링 기능을 추가해주세요.
-        // 이벤트 별로 events.json 에서 불러와 이벤트 처리하라고 했는데, 이부분도 시도해주시면 감사하겠습니다.ㅌ
+        // 이벤트 별로 events.json 에서 불러와 이벤트 처리하라고 했는데, 이부분도 시도해주시면 감사하겠습니다
 
         // 몬스터 등장
         monster = monsterManager.getRandomMonster();
@@ -201,7 +201,7 @@ app.post("/action", authentication, async (req, res) => {
         // 싸움 시작 : Player와 Monster가 순서대로 한대씩 때림
         while (true) {
           // Player 공격 턴
-          attackResult = await attackMonster(player, monster);
+          let attackResult = await attackMonster(player, monster);
           if (attackResult===1) {
             event.result = `${monster.name}을 처치하였습니다!`;
             break;

@@ -18,6 +18,12 @@
         <br>
         def: <span id="def"></span>
         <br>
+        level: <span id="level"></span>
+        <br>
+        exp: <span id="exp"></span>
+        <br>
+        levelUpExp: <span id="levelUpExp"></span>
+        <br>
     </div>
     <br>
     <div id="description" style="border: 1px solid  black; width: 30%">
@@ -73,6 +79,9 @@ const sendAction = (url, params = {}) => {
         $('#HP').text(`${player.HP} / ${player.maxHP}`)
         $('#str').text(`${player.str}`)
         $('#def').text(`${player.def}`)
+        $('#level').text(`${player.level}`)
+        $('#exp').text(`${player.exp}`)
+        $('#levelUpExp').text(`${player.levelUpExp}`)
       });
 
     } 

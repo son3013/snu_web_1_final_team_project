@@ -123,31 +123,46 @@ app.post("/action", authentication, async (req, res) => {
       if (_event.type === "battle") {
         // [박상진] TO DO: 종인이 대략 작성해놓은 코드를 검토해주세요. 경험치와 레벨링 기능을 추가해주세요.
         // 이벤트 별로 events.json 에서 불러와 이벤트 처리하라고 했는데, 이부분도 시도해주시면 감사하겠습니다.
+
+        // 몬스터 등장
         monster = monsterManager.getRandomMonster();
         event = { description: `${monster.name}와(과) 마주쳐 싸움을 벌였다.` };
+
+        // 싸움 시작 : Player와 Monster가 순서대로 한대씩 때림
         while (true) {
+
+          // Player 공격 턴
           if ((player.str - monster.def) > 0) {
             monster.hp -= (player.str - monster.def);
             console.log(monster.hp);
+
+            // Monster 처치
             if (monster.hp <= 0){
               event.result = `${monster.name}을 처치하였습니다!`
+              player.incrementExp(monster.exp);
+              await player.save()
               break;
             }
-          }
+          };
           console.log(`Hi. ${monster.hp}`);
+
+          // Monster 공격 턴
           if ((monster.str - player.def) > 0) {
             player.incrementHP(-(monster.str - player.def));
+
+            // Player 사망
             if (player.HP <= 0) {
                 x = 0, y = 0;
                 field = mapManager.getField(x, y);
                 player.x = x;
                 player.y = y;
                 player.HP = player.maxHP;
+                player.save()
               event.result = `당신은 ${monster.name}에게 처치당했습니다..GAME OVER`;
               break;
-            }
-          }
-        }
+            };
+          };
+        };
       } else if (_event.type === "item") {
         // [박상진] TO DO: 아이템일 경우, 사용자가 랜덤한 아이템을 획득. 사용자 str, def에 반영. 
         // 랜덤 아이템 가져오는 메서드: item = itemManager.getRandomItem();
@@ -181,4 +196,7 @@ app.post("/action", authentication, async (req, res) => {
   return res.send({ player, field, event, actions });
 });
 
-app.listen(3000);
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+});

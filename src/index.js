@@ -2,10 +2,11 @@ const express = require("express");
 const fs = require("fs");
 const mongoose = require("mongoose");
 const crypto = require("crypto");
+const { text } = require("express");
 
 const { constantManager, mapManager, monsterManager, itemManager } = require("./datas/Manager");
 const { Player } = require("./models/Player");
-const { text } = require("express");
+const { PlayerItem } = require("./models/PlayerItem");
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -67,6 +68,27 @@ app.get("/init", async (req, res) => {
   res.render("init")
 })
 
+
+// 사용자가 아이템을 획득했을 때 
+/*
+  _player : player model instance
+  _item : item instance
+*/
+const getItem = async (_player, _item) => {
+  // 사용자 - 아이템 별도 Model로 저장
+  playerItem = new PlayerItem({
+    player: _player,
+    itemId: _item.id
+  });
+  await playerItem.save()
+
+  // 아이템 효과 사용자에 반영
+  if (Object.keys(_item).includes('str')) _player.str += _item.str;
+  if (Object.keys(_item).includes('def')) _player.def += _item.def;
+  await _player.save()
+};
+
+
 app.post("/action", authentication, async (req, res) => {
   const { action } = req.body;
   
@@ -121,8 +143,8 @@ app.post("/action", authentication, async (req, res) => {
       }
       
       if (_event.type === "battle") {
-        // [박상진] TO DO: 종인이 대략 작성해놓은 코드를 검토해주세요. 경험치와 레벨링 기능을 추가해주세요.
-        // 이벤트 별로 events.json 에서 불러와 이벤트 처리하라고 했는데, 이부분도 시도해주시면 감사하겠습니다.
+        // [완료 - 박상진] TO DO: 종인이 대략 작성해놓은 코드를 검토해주세요. 경험치와 레벨링 기능을 추가해주세요.
+        // 이벤트 별로 events.json 에서 불러와 이벤트 처리하라고 했는데, 이부분도 시도해주시면 감사하겠습니다.ㅌ
 
         // 몬스터 등장
         monster = monsterManager.getRandomMonster();
@@ -164,9 +186,10 @@ app.post("/action", authentication, async (req, res) => {
           };
         };
       } else if (_event.type === "item") {
-        // [박상진] TO DO: 아이템일 경우, 사용자가 랜덤한 아이템을 획득. 사용자 str, def에 반영. 
-        // 랜덤 아이템 가져오는 메서드: item = itemManager.getRandomItem();
-        // 아이템 어떻게 저장하지? Models따로 파야하나 아니면 player.items.push(item) 이렇게 해버릴까?
+        // [완료 : 박상진] TO DO: 아이템일 경우, 사용자가 랜덤한 아이템을 획득. 사용자 str, def에 반영. 
+        item = itemManager.getRandomItem();
+        event = { description: `${item.name}을(를) 획득하였다.`};
+        await getItem(player, item)
       }
     }
     console.log(player.x, player.y);
@@ -200,3 +223,6 @@ const port = 3000;
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 });
+
+
+

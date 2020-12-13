@@ -76,19 +76,17 @@ app.get("/init", async (req, res) => {
   _monster : monster instance
   return : Monster 처치 시 1, 처리 실패 시 monster.hp 반환
 */
-const attackMonster = async (_player, _monster) => {
+const attackMonster = async (_player, _monster, _monsterHP) => {
   if ((_player.str - _monster.def) > 0) {
-    _monster.hp -= (_player.str - _monster.def);
-    console.log(_monster.hp);
+    _monsterHP -= (_player.str - _monster.def);
 
     // Monster 처치
-    if (_monster.hp <= 0){
-      _player.incrementExp(_monster.exp);
+    if (_monsterHP <= 0){
+      await _player.incrementExp(_monster.exp);
       await _player.save()
       return 1
-    };
-  return _monster.hp
-  };
+    }; return _monsterHP
+  }; return _monsterHP
 };
 
 
@@ -199,22 +197,24 @@ app.post("/action", authentication, async (req, res) => {
         event = { description: `${monster.name}와(과) 마주쳐 싸움을 벌였다.` };
 
         // 싸움 시작 : Player와 Monster가 순서대로 한대씩 때림
+        let monsterHP = monster.hp;
+
         while (true) {
           // Player 공격 턴
-          let attackResult = await attackMonster(player, monster);
+          let attackResult = await attackMonster(player, monster, monsterHP);
           if (attackResult===1) {
             event.result = `${monster.name}을 처치하였습니다!`;
             break;
           } else {
-            monster.hp = attackResult;
+            monsterHP = attackResult;
           }
-          console.log(`Hi. ${monster.name} HP: ${monster.hp}`);
+          console.log(`Hi. ${monster.name} HP: ${monsterHP}`);
 
           // Monster 공격 턴. 
           let isKilled = await getAttacked(player, monster);
           if (isKilled===1) {
             event.result = `당신은 ${monster.name}에게 처치당했습니다..GAME OVER`;
-            break;
+            break ;
           };
         };
       } else if (_event.type === "item") {

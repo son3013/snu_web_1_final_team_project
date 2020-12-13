@@ -6,7 +6,7 @@
       1,
       0,
       "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
-      [0, 0, 1, 1],
+      [0, 1, 1, 1],
       [
         { "type": "battle", "percent": 70 },
         { "type": "item", "percent": 20 },
@@ -17,13 +17,1275 @@
       0,
       1,
       "행운이 찾아올 것 같다.",
-      [1, 1, 0, 0],
+      [1, 1, 1, 0],
       [
         { "type": "battle", "percent": 30 },
         { "type": "item", "percent": 60 },
         { "type": "nothing", "percent": 10 }
       ]
     ],
-    [1, 1, "아무것도 없다.", [1, 0, 0, 1], [], []]
+    [1, 1, "아무것도 없다.", [1, 1, 1, 1], []],
+    [
+      2,
+      0,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [0, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 80 },
+        { "type": "item", "percent": 10 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      2,
+      1,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      0,
+      2,
+      "아무것도 없다.",
+      [1, 1, 1, 0],
+      [
+      ]
+    ],
+    [
+      1,
+      2,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      2,
+      2,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      0,
+      "검은 그림자의 기운이 느껴진다.",
+      [0, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      1,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      2,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      0,
+      3,
+      "아무것도 없다.",
+      [1, 1, 1, 0],
+      [
+        
+      ]
+    ],
+    [
+      1,
+      3,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      2,
+      3,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      3,
+      "행운의 기운이 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      4,
+      0,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [0, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      4,
+      1,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      4,
+      2,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      4,
+      3,
+      "아무것도 없다.",
+      [1, 1, 1, 1],
+      [
+        
+      ]
+    ],
+    [
+      0,
+      4,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 0],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      1,
+      4,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      2,
+      4,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      4,
+      "아무것도 없다.",
+      [1, 1, 1, 1],
+      [
+        
+      ]
+    ],
+    [
+      4,
+      4,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      5,
+      0,
+      "행운이 찾아올 것 같다.",
+      [0, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      5,
+      1,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      5,
+      2,
+      "검은 그림자의 기운이 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 80 },
+        { "type": "item", "percent": 10 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      5,
+      3,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      5,
+      4,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      0,
+      5,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 0],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      1,
+      5,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      2,
+      5,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      5,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      4,
+      5,
+      "아무것도 없다.",
+      [1, 1, 1, 1],
+      [
+        
+      ]
+    ],
+    [
+      5,
+      5,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      6,
+      0,
+      "행운이 찾아올 것 같다.",
+      [0, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      6,
+      1,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      6,
+      2,
+      "아무것도 없다.",
+      [1, 1, 1, 1],
+      [
+        
+      ]
+    ],
+    [
+      6,
+      3,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      6,
+      4,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      6,
+      5,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      0,
+      6,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 0],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      1,
+      6,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      2,
+      6,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      6,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      4,
+      6,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      5,
+      6,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      6,
+      6,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      7,
+      0,
+      "행운이 찾아올 것 같다.",
+      [0, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      7,
+      1,
+      "검은 그림자의 기운이 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 80 },
+        { "type": "item", "percent": 10 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      7,
+      2,
+      "아무것도 없다.",
+      [1, 1, 1, 1],
+      [
+        
+      ]
+    ],
+    [
+      7,
+      3,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      7,
+      4,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      7,
+      5,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      7,
+      6,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      0,
+      7,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 0],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      1,
+      7,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      2,
+      7,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      7,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      4,
+      7,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      5,
+      7,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      6,
+      7,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      7,
+      7,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      8,
+      0,
+      "행운이 찾아올 것 같다.",
+      [0, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 30 },
+        { "type": "item", "percent": 60 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      8,
+      1,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      8,
+      2,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      8,
+      3,
+      "아무것도 없다.",
+      [1, 1, 1, 1],
+      [
+       
+      ]
+    ],
+    [
+      8,
+      4,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      8,
+      5,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      8,
+      6,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      8,
+      7,
+      "검은 그림자의 기운이 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 80 },
+        { "type": "item", "percent": 10 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      0,
+      8,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 0],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      1,
+      8,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      2,
+      8,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      8,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      4,
+      8,
+      "검은 그림자의 기운이 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 80 },
+        { "type": "item", "percent": 10 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      5,
+      8,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      6,
+      8,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      7,
+      8,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      8,
+      8,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 30 },
+        { "type": "item", "percent": 60 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      9,
+      0,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [0, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      9,
+      1,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 40 },
+        { "type": "item", "percent": 50 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      9,
+      2,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      9,
+      3,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      9,
+      4,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      9,
+      5,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      9,
+      6,
+      "아무것도 없다.",
+      [1, 1, 1, 1],
+      [
+        
+      ]
+    ],
+    [
+      9,
+      7,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      9,
+      8,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      0,
+      9,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 0],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      1,
+      9,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      2,
+      9,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      9,
+      "검은 그림자의 기운이 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 80 },
+        { "type": "item", "percent": 10 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      4,
+      9,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      5,
+      9,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      6,
+      9,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      7,
+      9,
+      "스산한 바람이 분다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      8,
+      9,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      9,
+      9,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      10,
+      0,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [0, 0, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      10,
+      1,
+      "스산한 바람이 분다.",
+      [1, 0, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      10,
+      2,
+      "행운이 찾아올 것 같다.",
+      [1, 0, 1, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      10,
+      3,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 0, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      10,
+      4,
+      "아무것도 없다.",
+      [1, 0, 1, 1],
+      [
+        
+      ]
+    ],
+    [
+      10,
+      5,
+      "스산한 바람이 분다.",
+      [1, 0, 1, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      10,
+      6,
+      "행운이 찾아올 것 같다.",
+      [1, 0, 1, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      10,
+      7,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 0, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      10,
+      8,
+      "행운이 찾아올 것 같다.",
+      [1, 0, 1, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      10,
+      9,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 0, 1, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      0,
+      10,
+      "검은 그림자의 기운이 느껴진다.",
+      [1, 1, 0, 0],
+      [
+        { "type": "battle", "percent": 80 },
+        { "type": "item", "percent": 10 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      1,
+      10,
+      "스산한 바람이 분다.",
+      [1, 1, 0, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      2,
+      10,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 0, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      3,
+      10,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 0, 1],
+      [
+        { "type": "battle", "percent": 30 },
+        { "type": "item", "percent": 60 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      4,
+      10,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 0, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      5,
+      10,
+      "아무것도 없다.",
+      [1, 1, 0, 1],
+      [
+        
+      ]
+    ],
+    [
+      6,
+      10,
+      "스산한 바람이 분다.",
+      [1, 1, 0, 1],
+      [
+        { "type": "battle", "percent": 60 },
+        { "type": "item", "percent": 30 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      7,
+      10,
+      "왠지 몬스터가 나올 것 같은 그런 스산한 분위기가 느껴진다.",
+      [1, 1, 0, 1],
+      [
+        { "type": "battle", "percent": 70 },
+        { "type": "item", "percent": 20 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      8,
+      10,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 0, 1],
+      [
+        { "type": "battle", "percent": 20 },
+        { "type": "item", "percent": 70 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      9,
+      10,
+      "행운이 찾아올 것 같다.",
+      [1, 1, 0, 1],
+      [
+        { "type": "battle", "percent": 10 },
+        { "type": "item", "percent": 80 },
+        { "type": "nothing", "percent": 10 }
+      ]
+    ],
+    [
+      10,
+      10,
+      "평원의 끝이다.",
+      [1, 0, 0, 1],
+      [
+        
+      ]
+    ]
   ]
 }
